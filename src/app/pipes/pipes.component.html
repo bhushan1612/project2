@@ -1,0 +1,40 @@
+<div class="container">
+    <p>pipes works!</p>
+    <h4>{{user | uppercase}}</h4>
+    <h4>{{user1 | lowercase}}</h4>
+    <h4>{{user2 | maxlength}}</h4>
+    <h4>{{user3 | nummaxlength}}</h4>
+    <h4>{{Date | date:"short"}}</h4>
+    <h4>{{Date | date:"medium"}}</h4>
+    <h4>{{Date | date:"long"}}</h4>
+    <h4>{{Date}}</h4>
+  
+</div>
+
+<br><h3 class=" text-center text-decoration-underline">Chemistry lab</h3><br>
+
+    <table class=" table align-middle">
+        <tbody class="table text-center">
+        <tr class="table-dark">
+            <th>Sr No.</th>
+            <th>Chemical Name</th>
+            <th>Weight</th>
+            <th>Symbol</th>
+            <th>Create</th>
+            <th>Update</th>
+            <th>Delete</th>
+        </tr>
+        <tr *ngFor="let Liquid of chemical; let x=index" appBackgroundcolor="">
+            <td>{{x+1}}</td>
+            <td>{{Liquid.Name}}</td>
+            <td>{{Liquid.Weight}}</td>
+            <td>{{Liquid.Symbol}}</td>
+            <td><button class="btn text-bg-info " >Add</button></td>
+            <td><button class="btn bg-warning">Update</button></td>
+            <td><button class="btn bg-danger " >Delete</button></td>
+        </tr>
+    </tbody>
+</table>
+<button class="btn btn-primary m-lg-2" routerLink="/Addproduct"> &laquo; Previous</button>
+
+

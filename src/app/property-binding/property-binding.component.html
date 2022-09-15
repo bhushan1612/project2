@@ -1,0 +1,13 @@
+ <h4 class="text-center">Registration form using property-binding</h4> 
+<div class="container text-center bg-info" >
+<label class=" p-2 ">Name: </label><br>
+<input class=" w-75 text-center" type="text" [placeholder]="inputplaceHolder" ><br><br>
+<label > Contact Number</label><br>
+<input class=" w-75 text-center" type="number" (change)="usernumber();" [placeholder]="inputplaceHolder2">
+<br><br>
+<label > TelePhone Number</label><br>
+<input class=" w-75 text-center"  type="number"  [placeholder]="inputplaceHolder2">
+<br><br>
+<button class="btn btn-success mb-3" (click)="btn();" >Submit</button>
+</div>
+

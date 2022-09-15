@@ -1,0 +1,43 @@
+<h2 class="text-center ">Welcome to NgIf</h2>
+
+<div class="container bg-info">
+    <h3 class="text-center ">Welcome</h3>
+    <div class="jumbotron text-center " style="padding-left: 38%;">
+
+        <div class="row">
+            <div class="col col-lg-5">
+                <label class="form-label" style="font-weight: bold">First Name</label>
+                <input class="form-control" [(ngModel)]="fName" [placeholder]="fNameProperty"[ngClass]="fNamengError" />
+                <span style="color: red" *ngIf="isEmailPresent"> Firstname is Required</span>
+            </div>
+        </div>
+        <div class="row"> 
+            <div class="col col-lg-5">
+                <label class="form-label font-wt" style="font-weight: bold">Last Name</label>
+                <input class="form-control" [(ngModel)]="lName" [placeholder]="lNameProperty" [ngClass]="lNamengError">
+                <span style="color: red " *ngIf="isEmailPresent"> Lastname is Required</span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col col-lg-5">
+                <label class="form-label font-wt" style="font-weight: bold !important">Email</label>
+                <input class="form-control" [(ngModel)]="email" [placeholder]="emailproperty" [ngClass]="emailngError" />
+                <span style="color: red" *ngIf="isEmailPresent"> Email is Required</span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col col-lg-5">
+                <label class="form-label font-wt" style="font-weight: bold !important">Password</label>
+                <input class="form-control" [(ngModel)]="pass" [placeholder]="passproperty" [ngClass]="passngError">
+                <span style="color: red" *ngIf="isEmailPresent"> Required Vaild Password</span>
+            </div>
+        </div>
+        <div class="text-center m-4" style="padding-right: 61%;">
+            <button class="btn btn-primary" (click)="checkTheFileds();">Register</button>
+        </div>
+    </div>
+</div>
+<!-- <div class="container" >
+<button class=" btn btn-success" (click)="click();">Click Me</button><br><br>
+<p *ngIf="submit"> Thank You for registration.Have a Nice Day</p>
+</div> -->
